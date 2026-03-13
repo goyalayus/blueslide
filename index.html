@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BlueSlide | Technical Due Diligence for VCs</title>
+<meta content="Specialized technical audit and code verification services for Venture Capitalists. Uncovering the technical truth before the check is signed." name="description"/>
+<!-- Fonts: Inter and JetBrains Mono for the 'Technical Truth' aesthetic -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            'void': '#0A0A0A',
+            'graphite': '#1A1A1A',
+            'border-subtle': '#2A2A2A',
+            'accent': '#E2E2E2',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    /* Subtle Grid Background */
+    .grid-bg {
+      background-image: radial-gradient(circle at 2px 2px, #2A2A2A 1px, transparent 0);
+      background-size: 40px 40px;
+    }
+
+    /* Editorial Borders */
+    .border-l-accent {
+      border-left: 1px solid rgba(226, 226, 226, 0.2);
+    }
+
+    /* Selection Color */
+    ::selection {
+      background-color: #E2E2E2;
+      color: #0A0A0A;
+    }
+  </style>
+</head>
+<body class="bg-void text-accent font-sans selection:bg-accent selection:text-void overflow-x-hidden">
+<!-- Navigation removed as requested -->
+<main>
+<!-- BEGIN: Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 grid-bg" data-purpose="hero-section" id="hero">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-8 flex flex-col justify-center">
+<h1 class="text-6xl md:text-8xl font-extrabold leading-none tracking-tight mb-8">
+            Verifying <span class="italic font-light">Technical</span> Truth.
+          </h1>
+<p class="text-xl md:text-2xl text-zinc-400 font-light max-w-2xl leading-relaxed">
+            Most VC due diligence stops at the pitch deck. We read the actual code. We dig into the infrastructure, test the benchmarks, and find the technical debt before you wire the money.
+          </p>
+<div class="mt-12 flex flex-col sm:flex-row gap-6">
+<a class="bg-accent text-void px-8 py-4 font-bold uppercase tracking-widest text-sm hover:invert transition-all duration-300 text-center" href="#contact">
+              Request Audit
+            </a>
+<a class="border border-border-subtle px-8 py-4 font-bold uppercase tracking-widest text-sm hover:bg-border-subtle transition-all duration-300 text-center" href="#problem">
+              View Case Studies
+            </a>
+</div>
+</div>
+<div class="lg:col-span-4 hidden lg:flex flex-col justify-end pb-12">
+<div class="border-l border-border-subtle pl-8 py-4 space-y-6">
+<div data-purpose="stat-block">
+<span class="block font-mono text-xs text-zinc-500 mb-1">AUDIT_DEPTH</span>
+<span class="text-2xl font-mono">CODE_LEVEL</span>
+</div>
+<div data-purpose="stat-block">
+<span class="block font-mono text-xs text-zinc-500 mb-1">OBJECTIVE</span>
+<span class="text-2xl font-mono">ZERO_TRUST</span>
+</div>
+<div data-purpose="stat-block">
+<span class="block font-mono text-xs text-zinc-500 mb-1">OUTCOME</span>
+<span class="text-2xl font-mono">RISK_MITIGATION</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: The Problem Section -->
+<section class="py-32 bg-graphite border-y border-border-subtle" data-purpose="risk-case-studies" id="problem">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-xs font-mono uppercase tracking-[0.4em] text-zinc-500 mb-4">// Case Studies</h2>
+<h3 class="text-4xl md:text-5xl font-bold">The Cost of Unverified Tech.</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-border-subtle border border-border-subtle">
+<!-- The Vector DB Killer Exposure -->
+<div class="bg-void p-12 hover:bg-zinc-950 transition-colors">
+<h4 class="text-2xl font-bold mb-4"><a href="https://x.com/hydra_db" target="_blank" class="hover:text-zinc-300 transition-colors underline decoration-border-subtle underline-offset-4">HydraDB</a>: The $6.5M "Vector DB Killer"</h4>
+<p class="text-zinc-400 leading-relaxed mb-8">
+              They raised $6.5M claiming their "ontology-first context graph" would kill vector databases. We looked under the hood. They were hardcoding prompts to beat benchmarks and passing off Anthropic's research as their own. Their in-memory setup meant hosting just 500GB of data would cost $10,000+ in RAM. At scale, they'd go bankrupt just running the servers.
+            </p>
+<div class="flex items-center space-x-2 text-xs font-mono text-zinc-500">
+<span class="w-2 h-2 bg-red-500 rounded-full"></span>
+<span>RISK: BENCHMARK FRAUD &amp; COST EXPLOSION</span>
+</div>
+</div>
+<!-- Builder.ai Controversy -->
+<div class="bg-void p-12 hover:bg-zinc-950 transition-colors">
+<h4 class="text-2xl font-bold mb-4">Builder.ai: The Claims vs. Reality Gap</h4>
+<p class="text-zinc-400 leading-relaxed mb-8">
+              For years, Builder.ai claimed their AI was generating apps from scratch. It turned out they were mostly using offshore human labor. We run the audits that figure out if a startup's "proprietary AI" is real, or if it's just an API wrapper hiding a mechanical turk.
+            </p>
+<div class="flex items-center space-x-2 text-xs font-mono text-zinc-500">
+<span class="w-2 h-2 bg-red-500 rounded-full"></span>
+<span>RISK: IP VALUATION OVERSTATEMENT</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: The Problem Section -->
+<!-- BEGIN: Founder Profile -->
+<section class="py-32 bg-accent text-void" data-purpose="founder-bio" id="about">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<h2 class="text-xs font-mono uppercase tracking-[0.4em] mb-4 text-zinc-600">// Founder</h2>
+<h3 class="text-5xl font-extrabold mb-6 tracking-tighter">Ayush Goyal</h3>
+<p class="text-lg mb-8 leading-relaxed font-medium">
+              I'm a 20-year-old undergrad at IIT Roorkee and a former ML Engineer at Recepto.ai. I used to build long-running agents and post-training pipelines. Now, I tear down fraudulent engineering claims. Founders are incredibly good at selling a vision. We just check if they actually built it.
+            </p>
+<div class="flex flex-wrap gap-4 font-mono text-xs uppercase tracking-widest">
+<a class="px-4 py-2 border border-void hover:bg-void hover:text-accent transition-all" href="https://linkedin.com/in/ayush-goyal-45334418a" target="_blank">LinkedIn</a>
+<a class="px-4 py-2 border border-void hover:bg-void hover:text-accent transition-all" href="https://x.com/goyalayus" target="_blank">X / Twitter</a>
+<a class="px-4 py-2 border border-void hover:bg-void hover:text-accent transition-all" href="https://github.com/goyalayus" target="_blank">GitHub</a>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<!-- Founder Image -->
+<div class="relative aspect-[4/3] overflow-hidden border border-border-subtle group bg-void">
+<img alt="Ayush Goyal" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/d/1_jlZ3UHmWv_w8ZPLyBG4N8ZGrntPnudh"/>
+<div class="absolute inset-0 border border-white/10 pointer-events-none"></div>
+<!-- Decorative corner accents -->
+<div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent"></div>
+<div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-accent"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-accent"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Founder Profile -->
+<!-- BEGIN: CTA Section -->
+<section class="py-40 bg-void relative overflow-hidden" data-purpose="contact-cta" id="contact">
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+<h2 class="text-6xl md:text-8xl font-black mb-12 tracking-tight">Ready for a <br/>Reality Check?</h2>
+<p class="text-zinc-400 text-xl mb-12 max-w-2xl mx-auto">
+          Stop funding vaporware. Let's look at their codebase before you sign the term sheet.
+        </p>
+<a class="inline-block bg-accent text-void px-12 py-6 font-black uppercase tracking-[0.3em] text-lg hover:tracking-[0.5em] transition-all duration-500" href="mailto:hello@ayushgoyal.com">
+          Get in Touch
+        </a>
+</div>
+<!-- Subtle background element -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-[120px]"></div>
+</section>
+<!-- END: CTA Section -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="py-12 border-t border-border-subtle bg-void">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-mono text-xs text-zinc-500 uppercase tracking-widest">
+        © 2024 BlueSlide. All Rights Reserved.
+      </div>
+<div class="flex space-x-8 font-mono text-[10px] uppercase tracking-widest text-zinc-500">
+<span class="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
+<span class="hover:text-white cursor-pointer transition-colors">Audit Protocol</span>
+<span class="hover:text-white cursor-pointer transition-colors">Status: Active</span>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body>
+</html>
